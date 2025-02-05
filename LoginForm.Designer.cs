@@ -40,9 +40,12 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 29);
+            this.label1.Location = new System.Drawing.Point(97, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 46);
             this.label1.TabIndex = 0;
@@ -51,8 +54,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 115);
+            this.label2.Location = new System.Drawing.Point(97, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 1;
@@ -61,8 +67,11 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 152);
+            this.label3.Location = new System.Drawing.Point(97, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 2;
@@ -70,23 +79,28 @@
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(206, 115);
+            this.txt_username.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_username.Location = new System.Drawing.Point(245, 135);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(244, 26);
+            this.txt_username.Size = new System.Drawing.Size(698, 26);
             this.txt_username.TabIndex = 3;
             // 
             // txt_userpassword
             // 
-            this.txt_userpassword.Location = new System.Drawing.Point(206, 152);
+            this.txt_userpassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userpassword.Location = new System.Drawing.Point(245, 189);
             this.txt_userpassword.Name = "txt_userpassword";
-            this.txt_userpassword.Size = new System.Drawing.Size(244, 26);
+            this.txt_userpassword.Size = new System.Drawing.Size(698, 26);
             this.txt_userpassword.TabIndex = 4;
             // 
             // button_login
             // 
-            this.button_login.Location = new System.Drawing.Point(361, 200);
+            this.button_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_login.Location = new System.Drawing.Point(640, 234);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(89, 34);
+            this.button_login.Size = new System.Drawing.Size(303, 35);
             this.button_login.TabIndex = 5;
             this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = true;
@@ -94,9 +108,10 @@
             // 
             // button_exit
             // 
-            this.button_exit.Location = new System.Drawing.Point(105, 279);
+            this.button_exit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button_exit.Location = new System.Drawing.Point(245, 286);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(86, 30);
+            this.button_exit.Size = new System.Drawing.Size(155, 34);
             this.button_exit.TabIndex = 6;
             this.button_exit.Text = "Exit";
             this.button_exit.UseVisualStyleBackColor = true;
@@ -104,9 +119,10 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(206, 200);
+            this.button_clear.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button_clear.Location = new System.Drawing.Point(245, 234);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(81, 34);
+            this.button_clear.Size = new System.Drawing.Size(362, 35);
             this.button_clear.TabIndex = 7;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -116,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 332);
+            this.ClientSize = new System.Drawing.Size(1037, 693);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_exit);
             this.Controls.Add(this.button_login);
@@ -126,7 +142,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
-            this.Text = "Login";
+            this.Text = "x";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -37,19 +37,41 @@ namespace DotNetFramework4._8WindowForm
             string username = txt_username.Text;
             string password = txt_userpassword.Text;
 
-            bool result = _adoDotNetService.Login(username, password);
-            if (result)
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Login successfully!");
-                MenuForm from2 = new MenuForm();
-                from2.Show();
-                this.Hide();
+                MessageBox.Show("Username and password cannot be empty!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            MessageBox.Show("Something was wrong!", "Err" , MessageBoxButtons.OK ,MessageBoxIcon.Error);
-            txt_username.Clear();
-            txt_userpassword.Clear();
-            
-            txt_username.Focus();
+
+            button_login.Enabled = false;
+
+            try
+            {
+                bool result = _adoDotNetService.Login(username, password);
+                if (result)
+                {
+                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MenuForm form2 = new MenuForm();
+                    form2.Show();
+                    this.Hide(); // Hide current form instead of closing it directly
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                txt_username.Clear();
+                txt_userpassword.Clear();
+                txt_username.Focus();
+                button_login.Enabled = true; // Re-enable login button after attempt
+            }
         }
 
         private void button_clear_Click(object sender, EventArgs e)
