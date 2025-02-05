@@ -85,5 +85,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetFramework4.8WindowForm.Domain\DotNetFramework4.8WindowForm.Domain.csproj">
+      <Project>{8149f7e7-1006-4e51-b77d-bf25add8b5dd}</Project>
+      <Name>DotNetFramework4.8WindowForm.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
